@@ -16,7 +16,7 @@ const slice = createSlice({
             state.isLoading = true
         },
         getProductListSuccess(state, action) {
-            state.ProductList = action.payload
+            state.productList = action.payload
             state.isLoading = false
         },
         getProductListFailed(state, action) {

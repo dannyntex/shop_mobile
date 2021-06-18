@@ -4,14 +4,15 @@ const fecthProductList = async () => {
     const url = `${BASE_URL}api/product`
     try {
         const response = await fetch(url)
-       
-        console.log(response)
+        if (!response.ok) {
+            throw new Error(
+                `Fallo al obtener la api en fecthProductList. Error:${response.status}`
+            )
+        }     
         const productList = await response.json()
         return productList
     } catch (error) {
-        throw new Error(
-            `Error al obtener la lista de producto: ${error.message}`
-        )
+        throw new Error(`Warning: ${error.message}`)
     }
 }
 
@@ -20,7 +21,6 @@ const fecthProduct = async (id) => {
     try {
         const response = await fetch(url)
         const product = await response.json()
-
         return product
     } catch (error) {
         throw new Error(
