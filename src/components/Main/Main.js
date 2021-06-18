@@ -1,11 +1,12 @@
 import React from 'react'
+import Header from '../Header'
 
-export const Main = () => {
+const Main = ({ children }) => {
     return (
         <main>
             <Header />
-            <div>Hijos{children}</div>
-            <Footer />
+            <div>{children}</div>
         </main>
     )
 }
+export default Main
