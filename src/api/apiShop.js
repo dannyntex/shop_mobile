@@ -8,9 +8,8 @@ const fecthProductList = async () => {
             throw new Error(
                 `Fallo al obtener la api en fecthProductList. Error:${response.status}`
             )
-        }     
+        }
         const productList = await response.json()
-        console.log(response)
         return productList
     } catch (error) {
         throw new Error(`Warning: ${error.message}`)

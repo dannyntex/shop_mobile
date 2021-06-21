@@ -1,10 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-
     productList: [],
-    isLoading: false,
-
+    isLoading: false
 }
 
 const slice = createSlice({
@@ -28,8 +26,5 @@ const slice = createSlice({
 
 export const productListSlice = slice.reducer
 
-export const {
-    getProductList,
-    getProductListSuccess,
-    getProductListFailed
-} = slice.actions
+export const { getProductList, getProductListSuccess, getProductListFailed } =
+    slice.actions

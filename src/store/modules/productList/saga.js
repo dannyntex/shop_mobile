@@ -1,5 +1,5 @@
 import { call, put } from 'redux-saga/effects'
-import {fecthProductList} from '../../../api'
+import { fecthProductList } from '../../../api'
 import { getProductListSuccess, getProductListFailed } from './slice'
 
 function* fetchProductListSaga() {

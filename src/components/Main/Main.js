@@ -6,7 +6,7 @@ const Main = ({ children }) => {
     return (
         <main className="containerMain">
             <Header />
-           {children}
+            {children}
         </main>
     )
 }
