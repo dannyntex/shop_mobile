@@ -5,9 +5,11 @@ import store from '../store/store'
 
 const Adapter = ({ children }) => {
     return (
-        <ReduxProvider store={store}>
-            <BrowserRouter>{children}</BrowserRouter>
-        </ReduxProvider>
+        <React.StrictMode>
+            <ReduxProvider store={store}>
+                <BrowserRouter>{children}</BrowserRouter>
+            </ReduxProvider>
+        </React.StrictMode>
     )
 }
 export default Adapter

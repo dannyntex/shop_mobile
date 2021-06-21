@@ -9,5 +9,6 @@
     align-content: start;
     display: grid;
     row-gap: 0.5rem;
- flex-basis: 21%; 
+ 
+ margin-bottom: 10px;
 }

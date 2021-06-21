@@ -10,6 +10,7 @@ const fecthProductList = async () => {
             )
         }     
         const productList = await response.json()
+        console.log(response)
         return productList
     } catch (error) {
         throw new Error(`Warning: ${error.message}`)

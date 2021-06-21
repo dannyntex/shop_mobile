@@ -5,7 +5,6 @@ import { getProductList } from '../../store/modules/productList/slice'
 import './ProductList.css'
 
 const ProductList = () => {
-
     const dispatch = useDispatch()
     const productListData = useSelector((state) => productListSelector(state))
     useEffect(() => {
@@ -14,20 +13,21 @@ const ProductList = () => {
     const product = productListData.map((item) => {
         const boxProduct = (
             <div className="itemProductList" key={item.id}>
-            <img src={item.imgUrl} alt={item.model} />
+                <img src={item.imgUrl} alt={item.model} />
                 <div>
-                    {item.brand} {item.model}
+                    <span>{item.brand} </span> 
+                    <span>{item.model}</span>
                 </div>
                 <div>
-                {item.price}€</div>
-
+                    <span>{item.price}</span>
+                    <span>€</span>
+                </div>
             </div>
         )
         return boxProduct
     })
     return (
         <Fragment>
-        
             <header>Product list</header>
             <section>
                 <div className="containerProductList">{product}</div>
