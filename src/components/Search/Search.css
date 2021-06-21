@@ -1,0 +1,30 @@
+.containerSearch {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+}
+
+.Input-text {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    color: inherit;
+    width: 200px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: inherit;
+    line-height: 10px;
+    border: solid 1px #d3cece;
+    border-radius: 0.4rem;
+    transition: box-shadow 10ms;
+}
+
+.Input-text::placeholder {
+    color: #b0bec5;
+}
+
+.Input-text:focus {
+    outline: none;
+    box-shadow: 0.2rem 0.3rem 0.6rem rgb(221, 219, 219);
+}

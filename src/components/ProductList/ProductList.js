@@ -18,13 +18,13 @@ const ProductList = () => {
         const model = element.model.toLowerCase()
         return model.includes(inputSerchString.toLowerCase())
     })
-    const id = 'cGjFJlmqNPIwU59AOcY8H'
+
     const product =
         filterProduct.length !== 0 ? (
             filterProduct.map((item) => {
                 const boxProduct = (
                     <Link
-                        to={`product/${id}`}
+                        to={`product/${item.id}`}
                         className="itemProductList"
                         key={item.id}
                     >

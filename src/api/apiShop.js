@@ -18,14 +18,18 @@ const fecthProductList = async () => {
 
 const fecthProduct = async (id) => {
     const url = `${BASE_URL}api/product/${id}`
+
     try {
         const response = await fetch(url)
+        if (!response.ok) {
+            throw new Error(
+                `Fallo al obtener la api en fecthProduct. Error:${response.status}`
+            )
+        }
         const product = await response.json()
         return product
     } catch (error) {
-        throw new Error(
-            `Error al obtener el producto con ID: ${id}: ${error.message}`
-        )
+        throw new Error(`Warning: ${id}  ${error.message}`)
     }
 }
 

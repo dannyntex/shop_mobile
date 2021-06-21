@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import DetailsView from '../components/DetailsView'
-import ListView from '../components/ListView'
+import DetailsView from '../RootComponents/DetailsView'
+import ListView from '../RootComponents/ListView'
 
 import { NoFound } from '../components/NoFound'
 

@@ -1,0 +1,10 @@
+.containerDescription {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.titleDescription {
+    grid-column-start: 1;
+}
+.valueDescription {
+    grid-column-start: 2;
+}
